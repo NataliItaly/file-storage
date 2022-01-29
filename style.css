@@ -46,4 +46,9 @@ body {
   margin: 0 auto;
   position: relative;
   height: fit-content;
+  background-color: rgba(0, 255, 42, 0.287);
+  height: 100vh;
+}
+.header {
+  height: 200px;
 }
