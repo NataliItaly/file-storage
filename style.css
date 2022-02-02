@@ -47,24 +47,22 @@ body {
   position: relative;
   height: fit-content;
   background-color: rgba(0, 255, 42, 0.287);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
-.header {
-  height: 200px;
-}
+
 .container {
   width: 100%;
-  padding: 20px 40px;
+  padding: 10px 40px;
 }
 .header .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0;
+  flex-wrap: wrap;
 }
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background-image: url("assets/favicon.ico");
   background-position: center;
   background-repeat: no-repeat;
@@ -78,6 +76,7 @@ body {
 .nav-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .nav-list li {
   margin-left: 40px;
@@ -85,7 +84,6 @@ body {
 .nav-link {
   display: block;
   width: 100px;
-  height: 100px;
   color: #e1bc8e;
   transition: 0.6s all ease;
   text-align: center;
@@ -94,6 +92,7 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  margin-bottom: -9px;
 }
 .nav-link:hover {
   transform: scale(1.1);
@@ -101,11 +100,18 @@ body {
 }
 #language {
   width: 50px;
+  height: 30px;
   text-transform: uppercase;
-  background-color: rgba(0, 255, 42, 0.287);
+  background-color: rgb(25 78 34 / 29%); /*rgba(0, 255, 42, 0.287);*/
   color: #e1bc8e;
   border-radius: 10px;
 }
+#language option {
+  background-color: rgb(26, 100, 39);
+}
+/* #language option:focus {
+  background-color: aqua;
+} */
 .forest {
   /* background-image: url("assets/img/nav-bg/forest-les.jpg");
   background-repeat: no-repeat;
@@ -141,4 +147,104 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; */
+}
+.main .container {
+  padding: 0;
+}
+.screen {
+  width: 100%;
+  height: fit-content;
+  margin: 0 auto;
+}
+.screen-img {
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+}
+.footer .container {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-links {
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+  color: #e1bc8e;
+  margin-right: 20px;
+}
+.footer-links a {
+  color: inherit;
+}
+.footer-links a:hover {
+  color: #f3e0c7;
+  text-decoration: underline;
+}
+.rs-logo {
+  background-image: url("assets/svg/rss.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100px;
+  height: 100%;
+}
+
+@media (max-width: 1120px) {
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  .logo,
+  #language {
+    order: 0;
+  }
+  .header nav {
+    order: 1;
+    margin: 5px auto;
+  }
+  body {
+    font-size: 20px;
+  }
+  .nav-link img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 1019px) {
+  .nav-list li {
+    margin-left: 0;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 935px) {
+  .header .container {
+    padding: 10px 20px;
+  }
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 540px) {
+  .footer-links {
+    width: 150px;
+  }
+  .rs-logo {
+    width: 80px;
+    height: 40px;
+  }
+}
+@media (max-width: 340px) {
+  .footer .container {
+    justify-content: space-around;
+  }
+  .footer-links {
+    width: 130px;
+  }
 }
