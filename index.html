@@ -12,47 +12,39 @@
     <header class="header">
         <div class="container">
             <div class="logo"></div>
-            <nav>
+            
                 <ul class="nav-list">
-                    <li>
-                        <a href="" class="nav-link forest" data-transcription="">
-                            <img src="assets/img/nav-bg/forest-les.jpg" alt="forest">
-                         Лес</a>
+                    <li class="nav-link forest" data-track = "1">
+                        <span class="link-span" data-transcription="forest">Лес</span>
+                        <img src="assets/img/nav-bg/1.jpg" class="nav-link-img current-track " alt="forest">
                     </li>
-                    <li>
-                        <a href="" class="nav-link blackbird">
-                            <img src="assets/img/nav-bg/blackbird-drozd.jpg" alt="blackbird">
-                            Дрозд</a>
+                    <li class="nav-link blackbird" data-track = "2">
+                        <span class="link-span" data-transcription="blackbird">Дрозд</span>
+                        <img src="assets/img/nav-bg/2.jpg" class="nav-link-img" alt="blackbird">
                     </li>
-                    <li>
-                        <a href="" class="nav-link lark">
-                            <img src="assets/img/nav-bg/lark-javoronok.jpg" alt="lark">
-                            Жаворонок</a>
+                    <li class="nav-link lark" data-track = "3">
+                        <span class="link-span" data-transcription="lark">Жаворонок</span>
+                        <img src="assets/img/nav-bg/3.jpg" class="nav-link-img" alt="lark">
                     </li>
-                    <li>
-                        <a href="" class="nav-link nightingale">
-                            <img src="assets/img/nav-bg/nightingale-solovey.jpg" alt="nightingale">
-                            Соловей</a>
+                    <li class="nav-link nightingale" data-track = "4" >
+                        <span class="link-span" data-transcription="nightingale">Соловей</span>
+                        <img src="assets/img/nav-bg/4.jpg" class="nav-link-img" alt="nightingale">
                     </li>
-                    <li>
-                        <a href="" class="nav-link warbler">
-                            <img src="assets/img/nav-bg/warbler-slavka.jpg" alt="warbler">
-                            Славка</a>
+                    <li class="nav-link warbler" data-track = "5">
+                        <span class="link-span"  data-transcription="warbler">Славка</span>
+                        <img src="assets/img/nav-bg/5.jpg" class="nav-link-img" alt="warbler">
                     </li>
-                    <li>
-                        <a href="" class="nav-link robin">
-                            <img src="assets/img/nav-bg/robin-zaryanka.jpg" alt="robin">
-                            Зарянка</a>
+                    <li class="nav-link robin" data-track = "6">
+                        <span class="link-span" data-transcription="robin">Зарянка</span>
+                        <img src="assets/img/nav-bg/6.jpg" class="nav-link-img" alt="robin">
                     </li>
                 </ul>
-            </nav>
+            
 
             <div class="language">
-                <select name="language" id="language">
-                    <option value="ru">ru</option>
-                    <option value="en">en</option>
-                    <option value="it">it</option>
-                </select>
+                <button class="language-btn current-language" data-language = "ru">ru</button>
+                <button class="language-btn" data-language = "en">en</button>
+                <button class="language-btn" data-language = "it">it</button>
             </div>
         </div>
     </header>
@@ -61,7 +53,12 @@
     <main class="main">
         <div class="container">
             <div class="screen">
-                <img src="assets/img/main-bg/forest.jpg" alt="forest" class="screen-img">
+                <audio src="assets/audio/1.mp3"></audio>
+                <button class="prev-btn"></button>
+                <button class="audio-btn play-btn"></button>
+                <button class="next-btn"></button>
+               <!--  <button class="stop-btn">Stop</button>
+                <button class="download-btn">Download</button> -->
             </div>
         </div>
     </main>
