@@ -14,7 +14,7 @@
         <div class="logo"></div>
 
         <ul class="nav-list">
-          <li class="nav-link forest" data-track="1">
+          <li class="nav-link forest">
             <span class="link-span" data-transcription="forest">Лес</span>
             <img
               src="assets/img/nav-bg/1.jpg"
@@ -22,7 +22,7 @@
               alt="forest"
             />
           </li>
-          <li class="nav-link blackbird" data-track="2">
+          <li class="nav-link blackbird">
             <span class="link-span" data-transcription="blackbird">Дрозд</span>
             <img
               src="assets/img/nav-bg/2.jpg"
@@ -30,7 +30,7 @@
               alt="blackbird"
             />
           </li>
-          <li class="nav-link lark" data-track="3">
+          <li class="nav-link lark">
             <span class="link-span" data-transcription="lark">Жаворонок</span>
             <img
               src="assets/img/nav-bg/3.jpg"
@@ -38,7 +38,7 @@
               alt="lark"
             />
           </li>
-          <li class="nav-link nightingale" data-track="4">
+          <li class="nav-link nightingale">
             <span class="link-span" data-transcription="nightingale"
               >Соловей</span
             >
@@ -48,7 +48,7 @@
               alt="nightingale"
             />
           </li>
-          <li class="nav-link warbler" data-track="5">
+          <li class="nav-link warbler">
             <span class="link-span" data-transcription="warbler">Славка</span>
             <img
               src="assets/img/nav-bg/5.jpg"
@@ -56,7 +56,7 @@
               alt="warbler"
             />
           </li>
-          <li class="nav-link robin" data-track="6">
+          <li class="nav-link robin">
             <span class="link-span" data-transcription="robin">Зарянка</span>
             <img
               src="assets/img/nav-bg/6.jpg"
@@ -85,13 +85,6 @@
             <button class="audio-btn play-btn"></button>
             <button class="next-btn"></button>
           </div>
-          <div class="duration-range-wrapper">
-            <input type="range" name="range" id="duration-range" value="0" />
-            <div class="duration-wrapper">
-              <span class="current-duration">00:00</span>
-              <span class="total-duration">00:00</span>
-            </div>
-          </div>
           <div class="footer-controls-wrapper">
             <div class="volume-range-wrapper">
               <button class="mute-btn"></button>
@@ -99,10 +92,19 @@
                 type="range"
                 name="volume-range"
                 id="volume-range"
+                min="0"
+                max="10"
                 value="3"
               />
             </div>
-            <button class="download-btn"></button>
+            <a href="assets/audio/1.mp3" download="" class="download-btn"> </a>
+          </div>
+          <div class="duration-range-wrapper">
+            <input type="range" name="range" id="duration-range" value="0" />
+            <div class="duration-wrapper">
+              <span class="current-duration">00:00</span>
+              <span class="total-duration">00:00</span>
+            </div>
           </div>
         </div>
       </div>
@@ -116,8 +118,8 @@
           <a
             href="https://github.com/NataliItaly?tab=repositories"
             target="_blank"
-            >GitHub</a
-          >
+            class="github-link"
+          ></a>
         </div>
         <a href="https://rs.school/" class="rs-logo"></a>
       </div>
