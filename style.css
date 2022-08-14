@@ -39,7 +39,7 @@ html,
 body {
   line-height: 1;
   font-size: 20px;
-  background-color: #000000;
+  background-color: black;
 }
 body {
   height: 100vh;
@@ -100,7 +100,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   background-color: transparent;
-  color: #e1bc8e;
+  color: rgba(225, 188, 142, 0.5);
   transition: 0.6s all ease;
   position: relative;
   z-index: 2;
@@ -134,64 +134,14 @@ body {
   border: 2px solid #ebd95d;
   filter: saturate(50%);
 }
-/* #language {
-  width: 50px;
-  height: 30px;
-  text-transform: uppercase;
-  background-color: rgb(25 78 34 / 29%); /*rgba(0, 255, 42, 0.287);*/
-/*  color: #e1bc8e;
-  border-radius: 10px;
-}
-#language option {
-  background-color: rgb(26, 100, 39);
-}  */
-*/
-/* #language option:focus {
-  background-color: aqua;
-} */
-.forest {
-  /* background-image: url("assets/img/nav-bg/forest-les.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
-}
-.blackbird {
-  /* background-image: url("assets/img/nav-bg/blackbird-drozd.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
-}
-.lark {
-  /* background-image: url("assets/img/nav-bg/lark-javoronok.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
-}
-.nightingale {
-  /*  background-image: url("assets/img/nav-bg/nightingale-solovey.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
-}
-.warbler {
-  /*  background-image: url("assets/img/nav-bg/warbler-slavka.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
-}
-.robin {
-  /* background-image: url("assets/img/nav-bg/robin-zaryanka.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
-}
+
 .language-btn {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   text-transform: uppercase;
   text-align: center;
-  color: #e1bc8e;
+  color: rgba(225, 188, 142, 0.5);
   background-color: rgb(6, 85, 32);
   cursor: pointer;
   transition: 0.6s all ease;
@@ -214,6 +164,7 @@ body {
 .screen {
   width: 100%;
   height: 100%;
+  padding: 0 20px;
   margin: 0 auto;
   background-image: url("assets/img/main-bg/1.jpg");
   background-position: center;
@@ -221,8 +172,17 @@ body {
   background-size: cover;
   position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.contols-btn-wrapper {
+  width: 100%;
+  display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
+  margin-bottom: 20px;
 }
 .play-btn {
   background-color: transparent;
@@ -257,7 +217,6 @@ body {
   width: 40px;
   height: 40px;
   background-color: transparent;
-  margin-bottom: 10px;
   filter: invert(68%) sepia(17%) saturate(568%) hue-rotate(0deg) brightness(94%)
     contrast(88%);
   cursor: pointer;
@@ -276,9 +235,87 @@ body {
   background-size: cover;
 }
 .prev-btn:hover,
-.next-btn:hover {
+.next-btn:hover,
+.download-btn:hover {
   filter: invert(83%) sepia(22%) saturate(279%) hue-rotate(1deg) brightness(99%)
     contrast(91%);
+}
+
+.duration-range-wrapper {
+  width: 100%;
+}
+
+#duration-range {
+  width: 100%;
+}
+
+input[type="range"] {
+  overflow: hidden;
+  -webkit-appearance: none;
+  background-color: rgba(225, 188, 142, 0.5);
+  cursor: grab;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  -webkit-appearance: none;
+  color: rgba(0, 255, 42, 0.287);
+  margin-top: -1px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 10px;
+  -webkit-appearance: none;
+  height: 10px;
+  cursor: grab;
+  background: rgba(225, 188, 142, 0.5);
+  box-shadow: -1000px 0 0 1000px green;
+}
+
+input[type="range"]::-moz-range-progress {
+  background-color: green;
+}
+input[type="range"]::-moz-range-track {
+  background-color: rgba(225, 188, 142, 0.5);
+}
+input[type="range"]::-ms-fill-lower {
+  background-color: green;
+}
+input[type="range"]::-ms-fill-upper {
+  background-color: rgba(225, 188, 142, 0.5);
+}
+
+.duration-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.current-duration,
+.total-duration {
+  color: #e1bc8e;
+}
+
+.footer-controls-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.download-btn {
+  width: 50px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  background-image: url("./assets/svg/download.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: invert(68%) sepia(17%) saturate(568%) hue-rotate(0deg) brightness(94%)
+    contrast(88%);
+  cursor: pointer;
+  transition: 0.4s all;
 }
 
 .footer {
@@ -296,7 +333,7 @@ body {
   width: 170px;
   display: flex;
   justify-content: space-between;
-  color: #e1bc8e;
+  color: rgba(225, 188, 142, 0.5);
   margin-right: 20px;
 }
 .footer-links a {
@@ -307,6 +344,7 @@ body {
   text-decoration: underline;
 }
 .rs-logo {
+  display: block;
   background-image: url("assets/svg/rss.svg");
   background-repeat: no-repeat;
   background-position: center;

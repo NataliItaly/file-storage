@@ -1,80 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eco-sounds</title>
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="container">
-            <div class="logo"></div>
-            
-                <ul class="nav-list">
-                    <li class="nav-link forest" data-track = "1">
-                        <span class="link-span" data-transcription="forest">Лес</span>
-                        <img src="assets/img/nav-bg/1.jpg" class="nav-link-img current-track " alt="forest">
-                    </li>
-                    <li class="nav-link blackbird" data-track = "2">
-                        <span class="link-span" data-transcription="blackbird">Дрозд</span>
-                        <img src="assets/img/nav-bg/2.jpg" class="nav-link-img" alt="blackbird">
-                    </li>
-                    <li class="nav-link lark" data-track = "3">
-                        <span class="link-span" data-transcription="lark">Жаворонок</span>
-                        <img src="assets/img/nav-bg/3.jpg" class="nav-link-img" alt="lark">
-                    </li>
-                    <li class="nav-link nightingale" data-track = "4" >
-                        <span class="link-span" data-transcription="nightingale">Соловей</span>
-                        <img src="assets/img/nav-bg/4.jpg" class="nav-link-img" alt="nightingale">
-                    </li>
-                    <li class="nav-link warbler" data-track = "5">
-                        <span class="link-span"  data-transcription="warbler">Славка</span>
-                        <img src="assets/img/nav-bg/5.jpg" class="nav-link-img" alt="warbler">
-                    </li>
-                    <li class="nav-link robin" data-track = "6">
-                        <span class="link-span" data-transcription="robin">Зарянка</span>
-                        <img src="assets/img/nav-bg/6.jpg" class="nav-link-img" alt="robin">
-                    </li>
-                </ul>
-            
+      <div class="container">
+        <div class="logo"></div>
 
-            <div class="language">
-                <button class="language-btn current-language" data-language = "ru">ru</button>
-                <button class="language-btn" data-language = "en">en</button>
-                <button class="language-btn" data-language = "it">it</button>
-            </div>
+        <ul class="nav-list">
+          <li class="nav-link forest" data-track="1">
+            <span class="link-span" data-transcription="forest">Лес</span>
+            <img
+              src="assets/img/nav-bg/1.jpg"
+              class="nav-link-img current-track"
+              alt="forest"
+            />
+          </li>
+          <li class="nav-link blackbird" data-track="2">
+            <span class="link-span" data-transcription="blackbird">Дрозд</span>
+            <img
+              src="assets/img/nav-bg/2.jpg"
+              class="nav-link-img"
+              alt="blackbird"
+            />
+          </li>
+          <li class="nav-link lark" data-track="3">
+            <span class="link-span" data-transcription="lark">Жаворонок</span>
+            <img
+              src="assets/img/nav-bg/3.jpg"
+              class="nav-link-img"
+              alt="lark"
+            />
+          </li>
+          <li class="nav-link nightingale" data-track="4">
+            <span class="link-span" data-transcription="nightingale"
+              >Соловей</span
+            >
+            <img
+              src="assets/img/nav-bg/4.jpg"
+              class="nav-link-img"
+              alt="nightingale"
+            />
+          </li>
+          <li class="nav-link warbler" data-track="5">
+            <span class="link-span" data-transcription="warbler">Славка</span>
+            <img
+              src="assets/img/nav-bg/5.jpg"
+              class="nav-link-img"
+              alt="warbler"
+            />
+          </li>
+          <li class="nav-link robin" data-track="6">
+            <span class="link-span" data-transcription="robin">Зарянка</span>
+            <img
+              src="assets/img/nav-bg/6.jpg"
+              class="nav-link-img"
+              alt="robin"
+            />
+          </li>
+        </ul>
+
+        <div class="language">
+          <button class="language-btn current-language" data-language="ru">
+            ru
+          </button>
+          <button class="language-btn" data-language="en">en</button>
+          <button class="language-btn" data-language="it">it</button>
         </div>
+      </div>
     </header>
 
-
     <main class="main">
-        <div class="container">
-            <div class="screen">
-                <audio src="assets/audio/1.mp3"></audio>
-                <button class="prev-btn"></button>
-                <button class="audio-btn play-btn"></button>
-                <button class="next-btn"></button>
-               <!--  <button class="stop-btn">Stop</button>
-                <button class="download-btn">Download</button> -->
+      <div class="container">
+        <div class="screen">
+          <audio src="assets/audio/1.mp3"></audio>
+          <div class="contols-btn-wrapper">
+            <button class="prev-btn"></button>
+            <button class="audio-btn play-btn"></button>
+            <button class="next-btn"></button>
+          </div>
+          <div class="duration-range-wrapper">
+            <input type="range" name="range" id="duration-range" value="0" />
+            <div class="duration-wrapper">
+              <span class="current-duration">00:00</span>
+              <span class="total-duration">00:00</span>
             </div>
+          </div>
+          <div class="footer-controls-wrapper">
+            <div class="volume-range-wrapper">
+              <button class="mute-btn"></button>
+              <input
+                type="range"
+                name="volume-range"
+                id="volume-range"
+                value="3"
+              />
+            </div>
+            <button class="download-btn"></button>
+          </div>
         </div>
+      </div>
     </main>
 
-
     <footer class="footer">
-        <div class="container">
-            <div class="footer-links">
-                <span>&copy;</span>
-                <span>2022</span>
-                <a href="https://github.com/NataliItaly?tab=repositories" target="_blank">GitHub</a>
-            </div>
-            <div class="rs-logo">
+      <div class="container">
+        <div class="footer-links">
+          <span>&copy;</span>
+          <span>2022</span>
+          <a
+            href="https://github.com/NataliItaly?tab=repositories"
+            target="_blank"
+            >GitHub</a
+          >
         </div>
+        <a href="https://rs.school/" class="rs-logo"></a>
+      </div>
     </footer>
-       
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
